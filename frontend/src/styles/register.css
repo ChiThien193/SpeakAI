@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap");
+
+.register-page {
+  font-family: "Public Sans", sans-serif;
+}
+
+.register-blob {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.register-blob-lg {
+  right: -6rem;
+  bottom: -6rem;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(30, 64, 175, 0.16);
+  filter: blur(48px);
+}
+
+.register-blob-sm {
+  top: 25%;
+  left: -6rem;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(59, 130, 246, 0.12);
+  filter: blur(32px);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 24;
+  line-height: 1;
+}

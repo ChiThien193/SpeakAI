@@ -1,0 +1,23 @@
+@keyframes floatY {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.home-hero-mockup {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.home-topic-image {
+  transition: transform 0.5s ease;
+}
+
+.group:hover .home-topic-image {
+  transform: scale(1.1);
+}
