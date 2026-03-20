@@ -350,7 +350,7 @@ export default function RegisterPage() {
 
           <footer className="mt-auto pt-8 text-center text-xs text-slate-400">
             <p>
-              © 2024 SpeakAI Inc. All rights reserved.{" "}
+              © 2026 SpeakAI Inc. All rights reserved.{" "}
               <br className="sm:hidden" />
               <Link to="/privacy-policy" className="mx-2 hover:text-blue-800">
               Privacy Policy

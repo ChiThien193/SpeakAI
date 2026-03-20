@@ -15,10 +15,10 @@ export default function DashboardPage() {
       title: "Trò chuyện",
       desc: "Nâng cao kỹ năng ngôn ngữ của bạn bằng cách trò chuyện với giáo viên AI của chúng tôi.",
       tags: ["#Viết", "#Đọc"],
-      color: "bg-yellow-300",
       image:
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
       onClick: () => navigate("/practice"),
+      variant: "yellow",
     },
     {
       title: "Chế độ câu",
@@ -28,6 +28,7 @@ export default function DashboardPage() {
       image:
         "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop",
       onClick: () => navigate("/practice"),
+      variant: "gray",
     },
     {
       title: "Chế độ Word",
@@ -37,6 +38,7 @@ export default function DashboardPage() {
       image:
         "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop",
       onClick: () => navigate("/practice"),
+      variant: "gray",
     },
   ];
 
@@ -118,7 +120,7 @@ export default function DashboardPage() {
                 alt={userName}
                 className="h-10 w-10 rounded-full object-cover"
               />
-              <span className="hidden sm:block text-sm font-semibold">
+              <span className="hidden text-sm font-semibold sm:block">
                 {userName}
               </span>
             </Link>
@@ -127,7 +129,7 @@ export default function DashboardPage() {
           <div className="grid gap-6 xl:grid-cols-[1.35fr_0.85fr]">
             {/* Left content */}
             <section className="space-y-6">
-              {learningCards.map((card, index) => (
+              {learningCards.map((card) => (
                 <button
                   key={card.title}
                   type="button"
@@ -155,7 +157,7 @@ export default function DashboardPage() {
                   </div>
 
                   <div className="relative min-h-[230px]">
-                    {index === 0 ? (
+                    {card.variant === "yellow" ? (
                       <div className="absolute inset-0 bg-yellow-300">
                         <div className="absolute inset-y-0 left-0 w-20 skew-x-[-12deg] bg-white/80"></div>
                         <img
@@ -177,9 +179,6 @@ export default function DashboardPage() {
                             {card.badge}
                           </div>
                         )}
-                        <div className="absolute right-0 top-0 rounded-bl-[28px] bg-pink-600 px-6 py-3 text-sm font-bold text-white">
-                          PREMIUM
-                        </div>
                       </div>
                     )}
                   </div>
@@ -189,26 +188,14 @@ export default function DashboardPage() {
 
             {/* Right content */}
             <aside className="space-y-6">
-              <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-r from-pink-700 via-pink-600 to-pink-500 p-8 text-white shadow-sm">
-                <div className="absolute -right-10 top-0 h-full w-40 rounded-full bg-pink-400/40"></div>
-                <div className="absolute right-16 top-0 h-full w-40 rounded-full bg-pink-800/25"></div>
-
-                <h2 className="relative z-10 text-4xl font-black leading-tight">
-                  Giảm giá mùa xuân:
-                  <br />
-                  giảm giá tới 79%!
-                </h2>
-
-                <p className="relative z-10 mt-10 text-base text-pink-100">
-                  Trong thời gian giới hạn, SpeakAI Premium đang được giảm giá.
+              <div className="rounded-[28px] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Chào mừng trở lại
+                </h3>
+                <p className="mt-4 text-lg leading-8 text-slate-600">
+                  Tiếp tục hành trình học cùng SpeakAI. Chọn một chế độ học phù
+                  hợp để bắt đầu luyện tập ngay hôm nay.
                 </p>
-
-                <div className="relative z-10 mt-12 flex items-center justify-between">
-                  <button className="text-lg font-bold">Nâng cấp ngay</button>
-                  <button className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-pink-600 shadow-md">
-                    <span className="material-symbols-outlined">arrow_forward</span>
-                  </button>
-                </div>
               </div>
 
               <div className="rounded-[28px] bg-white p-8 shadow-sm">
@@ -253,7 +240,7 @@ export default function DashboardPage() {
               <div className="rounded-[28px] bg-white p-6 shadow-sm">
                 <Link
                   to="/profile"
-                  className="flex items-center gap-4 rounded-2xl transition hover:bg-slate-50 p-2"
+                  className="flex items-center gap-4 rounded-2xl p-2 transition hover:bg-slate-50"
                 >
                   <img
                     src={userAvatar}
@@ -261,7 +248,9 @@ export default function DashboardPage() {
                     className="h-16 w-16 rounded-full object-cover"
                   />
                   <div>
-                    <p className="text-lg font-bold text-slate-900">{userName}</p>
+                    <p className="text-lg font-bold text-slate-900">
+                      {userName}
+                    </p>
                     <p className="text-sm text-slate-500">
                       Xem hồ sơ cá nhân
                     </p>

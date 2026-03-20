@@ -35,7 +35,7 @@ export default function MainFooter() {
         </div>
 
         <div className="text-center text-sm text-slate-500">
-          © 2023 SpeakAI. All rights reserved. Built for learners worldwide.
+          © 2026 SpeakAI. All rights reserved. Built for learners worldwide.
         </div>
       </div>
     </footer>
