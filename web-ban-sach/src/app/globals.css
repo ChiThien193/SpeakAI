@@ -1,0 +1,171 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-select {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  width: 150px; /* Chiều rộng cho thanh chọn */
+}
+
+.search-input {
+  flex: 1; /* Chiếm không gian còn lại */
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px; /* Chiều rộng của thanh tìm kiếm */
+}
+
+.search-btn {
+  padding: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.book-list, .Items-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Hiển thị 5 sản phẩm trên 1 hàng */
+  gap: 20px;
+}
+
+.book-item, .Item {
+  text-align: center;
+}
+
+.book-item img, .Item img {
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.book-item p, .Item p {
+  color: #ff6b6b;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.header-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-logo {
+  width: 250px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.footer-col p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 400px; 
+}
+
+.slide img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+  border-radius: 8px; 
+}
+
