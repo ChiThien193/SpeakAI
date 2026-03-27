@@ -1,0 +1,31 @@
+Scenario: Basic job interview
+Role: Interviewer and candidate conversation
+
+Vocabulary:
+experience
+strength
+skill
+position
+responsibility
+teamwork
+achievement
+career goal
+
+Useful patterns:
+I have experience in...
+One of my strengths is...
+I am interested in this position because...
+I worked on...
+I helped my team...
+
+Dialogue samples:
+Interviewer: Could you tell me about yourself?
+Candidate: My name is Minh. I am a recent graduate in Information Technology.
+Interviewer: What are your strengths?
+Candidate: One of my strengths is teamwork. I also learn quickly.
+Interviewer: Do you have any experience?
+Candidate: I worked on several academic software projects at university.
+
+Rules:
+Keep the tone professional and supportive.
+Ask common interview follow-up questions. 

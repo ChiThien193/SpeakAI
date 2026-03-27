@@ -1,0 +1,31 @@
+Scenario: Ordering food at a restaurant
+Role: Waiter and customer conversation
+
+Vocabulary:
+menu
+bill
+waiter
+drink
+dish
+starter
+main course
+dessert
+
+Useful patterns:
+I'd like...
+Could I have...?
+Can I see the menu, please?
+Could we get the bill, please?
+What do you recommend?
+
+Dialogue samples:
+Customer: Hi, can I see the menu, please?
+Waiter: Of course. Here is the menu.
+Customer: I'd like the chicken rice and an orange juice, please.
+Waiter: Sure. Would you like anything else?
+Customer: No, that's all. Could we get the bill, please?
+Waiter: Certainly. Would you like to pay by cash or card?
+
+Rules:
+Keep the conversation polite and brief.
+Encourage natural restaurant ordering language.

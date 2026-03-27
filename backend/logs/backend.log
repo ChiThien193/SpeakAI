@@ -1,0 +1,375 @@
+2026-03-28 03:31:04,548 | ERROR | speakai.error | req=595fcfff5f2e | GET /api/admin/analytics/overview | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 20, in get_admin_overview
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:31:04,905 | ERROR | speakai.error | req=fe3da3109f25 | GET /api/admin/reports | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 43, in get_admin_reports
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:31:05,131 | ERROR | speakai.error | req=90c62622d0bb | PATCH /api/admin/reports/report_1/status | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 58, in update_admin_report_status
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:31:05,360 | INFO | speakai.request | req=0c73d5e784a6 | GET / | status=200 | 0.61ms | client=testclient | request completed
+2026-03-28 03:31:05,361 | INFO | httpx | req=- | - - | status=- | -ms | client=- | HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-03-28 03:34:36,221 | INFO | speakai.request | req=f26d07713440 | POST /api/auth/sync-me | status=200 | 481.88ms | client=127.0.0.1 | request completed
+2026-03-28 03:34:39,267 | INFO | speakai.request | req=798a5c5dfa2a | GET /api/auth/me | status=200 | 4.45ms | client=127.0.0.1 | request completed
+2026-03-28 03:43:16,489 | ERROR | speakai.error | req=2b558ea66e15 | GET /api/admin/analytics/overview | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 20, in get_admin_overview
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:43:16,791 | ERROR | speakai.error | req=16234418de34 | GET /api/admin/reports | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 43, in get_admin_reports
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:43:17,007 | ERROR | speakai.error | req=1b503f1f7633 | PATCH /api/admin/reports/report_1/status | status=500 | -ms | client=testclient | unhandled server error
+Traceback (most recent call last):
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\chith\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\core\request_middleware.py", line 19, in add_request_context
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 116, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 670, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\venv\Lib\site-packages\fastapi\routing.py", line 324, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\api\admin.py", line 58, in update_admin_report_status
+    admin_service = AdminService()
+                    ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\services\admin_service.py", line 17, in __init__
+    self.db = get_database()
+              ^^^^^^^^^^^^^^
+  File "D:\Đồ án tốt nghiệp\SpeakAI\backend\app\db\mongo.py", line 73, in get_database
+    raise RuntimeError("MongoDB is not connected")
+RuntimeError: MongoDB is not connected
+2026-03-28 03:43:17,226 | INFO | speakai.request | req=eb68bbc82c0a | GET / | status=200 | 0.52ms | client=testclient | request completed
+2026-03-28 03:43:17,227 | INFO | httpx | req=- | - - | status=- | -ms | client=- | HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-03-28 03:44:37,865 | INFO | speakai.request | req=d41ecc645f04 | GET /api/admin/analytics/overview | status=200 | 531.31ms | client=127.0.0.1 | request completed
+2026-03-28 03:45:26,600 | INFO | speakai.request | req=46e5abec981c | GET /api/admin/analytics/scenarios | status=200 | 11.55ms | client=127.0.0.1 | request completed
+2026-03-28 03:46:12,896 | INFO | speakai.request | req=873cc41847ff | GET /api/admin/reports | status=200 | 5.08ms | client=127.0.0.1 | request completed
+2026-03-28 03:47:13,950 | INFO | speakai.request | req=540db570a0d1 | PATCH /api/admin/reports/7a6cf1c5ad8d485e99f6c822fad3ed18/status | status=200 | 8.1ms | client=127.0.0.1 | request completed
+2026-03-28 03:47:25,627 | INFO | speakai.request | req=24d6c5ca647f | PATCH /api/admin/reports/7a6cf1c5ad8d485e99f6c822fad3ed18/status | status=200 | 4.38ms | client=127.0.0.1 | request completed
+2026-03-28 04:29:03,743 | INFO | speakai.request | req=b1aa5f588258 | GET / | status=200 | 1.21ms | client=127.0.0.1 | request completed
+2026-03-28 04:29:03,797 | INFO | speakai.request | req=2623b018aea4 | GET /favicon.ico | status=404 | 0.52ms | client=127.0.0.1 | request completed
+2026-03-28 04:31:14,925 | INFO | speakai.request | req=ddb3a7ced153 | GET /docs | status=200 | 0.42ms | client=127.0.0.1 | request completed
+2026-03-28 04:31:15,145 | INFO | speakai.request | req=daf7138d6070 | GET /openapi.json | status=200 | 128.72ms | client=127.0.0.1 | request completed

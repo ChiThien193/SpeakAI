@@ -1,0 +1,30 @@
+Scenario: At the airport
+Role: Airport staff and traveler conversation
+
+Vocabulary:
+passport
+boarding pass
+gate
+check-in
+luggage
+ticket
+security
+departure
+
+Useful patterns:
+I'd like to check in.
+Here is my passport.
+Where is gate A12?
+How many bags can I check in?
+What time does boarding start?
+
+Dialogue samples:
+Traveler: Hello, I'd like to check in.
+Staff: Sure. May I see your passport and ticket, please?
+Traveler: Here is my passport.
+Staff: Thank you. Do you have any luggage to check in?
+Traveler: Yes, one suitcase.
+Staff: Great. Your gate is A12 and boarding starts in thirty minutes.
+
+Rules:
+Keep the language clear and practical for travel situations.
